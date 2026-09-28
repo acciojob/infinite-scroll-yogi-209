@@ -10,3 +10,9 @@ function addItems(count){
 		list.appendChild(li);
 	}
 }
+addItems(10);
+list.addEventListener("scroll",()=>{
+	if(list.scrollTop+list.clientHeight>=list.scrollHeight-1){
+		addItems(2);
+	}
+});
